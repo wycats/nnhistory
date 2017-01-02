@@ -1,0 +1,67 @@
+****
+****  This file contains information on Win32s.
+****
+
+========================================================================
+        Determining Win32s version
+========================================================================
+You can determine which version of Win32s you have in one of two ways:
+    - Check the WIN32S.INI file in your Windows system directory.
+    - If you are running Windows for Workgroups, select the WIN32S16.DLL 
+      file from the Windows system directory in File Manager. Then from 
+      the File menu, choose Properties. The Version line contains the 
+      major version and the build number. 
+
+========================================================================
+        Removing Win32s
+========================================================================
+To remove the Win32s, do the following:
+
+1. Remove the following line from the [386Enh] section in the SYSTEM.INI 
+   file:
+
+      device=<WINDOWS>\<SYSTEM>\win32s\w32s.386
+
+   where <WINDOWS> and <SYSTEM> are where the Windows and System
+   directories are, respectively.
+
+2. Remove winmm16.dll from the following line from the [BOOT] section in 
+   the SYSTEM.INI file:
+
+      drivers=mmsystem.dll winmm16.dll
+
+3. Delete the following files from the <WINDOWS>\<SYSTEM> subdirectory:
+      W32SYS.DLL
+      WIN32S16.DLL
+      WIN32S.INI
+
+4. Delete all the files in the <WINDOWS>\<SYSTEM>\WIN32S subdirectory.
+   Then delete the subdirectory itself.
+
+5. Restart Windows.
+
+========================================================================
+        Obtaining Win32s
+========================================================================
+Here's how you can obtain the Win32s version 1.20, which Microsoft 
+refers to as application note PW1118:
+
+  To obtain this Application Note (number PW1118) and the files
+  included with it, download PW1118.EXE, a self-extracting file,
+  from the Microsoft Software Library (MSL) on the following services:
+   - CompuServe
+        GO MSL
+        Search for PW1118.EXE
+        Display results and download
+   - Microsoft Download Service (MSDL)
+        Dial (206) 936-6735 to connect to MSDL
+        Download PW1118.EXE
+   - Internet (anonymous FTP)
+        ftp ftp.microsoft.com
+        Change to the \SOFTLIB\MSLFILES directory
+        Get PW1118.EXE
+
+
+
+
+

@@ -1,0 +1,27 @@
+# RenderWare(tm) Extruded Text
+# Glyph E
+# Character cell x offset = 0.651515
+# Character cell y offset = 0.000000
+
+ModelBegin
+    ClumpBegin
+        Hints HS Editable
+        Vertex 0.075758 0.000000 0.000000
+        Vertex 0.075758 0.666667 0.000000
+        Vertex 0.590909 0.666667 0.000000
+        Vertex 0.590909 0.594203 0.000000
+        Vertex 0.166667 0.594203 0.000000
+        Vertex 0.166667 0.376812 0.000000
+        Vertex 0.560606 0.376812 0.000000
+        Vertex 0.560606 0.304348 0.000000
+        Vertex 0.166667 0.304348 0.000000
+        Vertex 0.166667 0.072464 0.000000
+        Vertex 0.606061 0.072464 0.000000
+        Vertex 0.606061 0.000000 0.000000
+
+        Surface 0.4 0.6 0.6
+        LightSampling Vertex
+        Color 1.0 0.0 0.0
+        Polygon 12 12 11 10 9 8 7 6 5 4 3 2 1
+    ClumpEnd
+ModelEnd

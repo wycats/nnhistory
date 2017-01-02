@@ -1,0 +1,20 @@
+<pre>
+<script>
+function f() {
+  alert(this + " : " + this.x);
+}
+
+var o = new Object();
+o.x = 1;
+
+function F_call(o) {
+  var f = this;
+  with (o) { f() };
+  // o.eval("f()");
+}
+
+Function.prototype.call = F_call;
+
+f.call(o);
+</script>
+</pre>

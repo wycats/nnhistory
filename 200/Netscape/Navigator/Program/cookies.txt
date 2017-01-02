@@ -1,0 +1,10 @@
+# Netscape HTTP Cookie File
+# http://www.netscape.com/newsref/std/cookie_spec.html
+# This is a generated file!  Do not edit.
+
+searchguide.level3.com	FALSE	/search	FALSE	1514449127	t-0	1
+.google.com	TRUE	/	FALSE	1498724098	NID	93=R68M3ANtgJ3cAPgWMOHARjdF6yy0A_lTOxM0Ja4ihU7IiH4p2Hsuzxx6I8FR_-YYnIEYpCD_MFSVRCsNgsfS0Z9V4VxqWMMyleBoP8dyb3jEUz_T1o_9EXAznRoZzbDfz8A7ggl2erASmWQ
+lookup.t-mobile.com	FALSE	/	FALSE	1798328070	langPref	en
+lookup.t-mobile.com	FALSE	/	FALSE	1798328070	sgUID	140a13e3b614efc74a48713d48139f60
+lookup.t-mobile.com	FALSE	/	FALSE	1798330685	sid	31c06e7c96e559c476a3529af8a59b4e
+lookup.t-mobile.com	FALSE	/	FALSE	1798330652	ooep	nxd

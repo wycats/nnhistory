@@ -1,0 +1,169 @@
+<form></form>
+<img src="">
+
+<pre>
+
+<script>
+
+function log(s) {
+  document.writeln(escapeHTML(s));
+}
+
+var undefined;
+
+var x = (0 == null);
+
+function debug(obj, name) {
+  document.open();
+  document.writeln(name + ":");
+  var any = false;
+
+  for (var prop in obj) {
+    any = true;
+    var val = obj[prop];
+    var string = val + '';
+
+    var type = typeof val;
+
+    if (type == 'string') {
+      string = "'" + val + "'";
+    } else if (type == 'number' || type == 'boolean') {
+      string = val + '';
+    } else if (type == 'undefined') {
+      string = 'undefined';
+    } else if (val == null) {
+      string = 'null';
+    } else {
+      string = val + '';
+    }
+
+    if (string == '') {
+      string = '<empty>';
+    }
+
+    log("[" + prop + "] " + string);
+  }
+
+  if (any == false) {
+    log("No properties");
+  }
+
+  log('');
+  document.close();
+}
+
+debug(window, "window");
+debug(document, "document");
+debug(document.images[0], "document.images[0]");
+debug(navigator, "navigator");
+debug(history, "history");
+
+function logTypeOf(val, desc) {
+  var type = typeOf(val);
+  log(desc + ': ' + type);
+}
+
+var undefined;
+
+function typeOf(val) {
+  return typeof val;
+}
+
+function escapeHTML(string) {
+  var out = "";
+
+  for (var i=0; i<string.length; i++) {
+    var c = string.charAt(i);
+
+    if (c == '<') {
+      out += "&lt;";
+    } else if (c == ">") {
+      out += "&gt;";
+    } else {
+      out += c;
+    }
+  }
+
+  return out;
+}
+
+var o = new Object();
+var p = new Object();
+p.x = 1;
+var d = new Date();
+
+function badToString() {
+  return this;
+}
+
+function Array_push(val) {
+  this.length = this.length + 1;
+  this[this.length - 1] = val;
+}
+
+Array.prototype.push = Array_push;
+Array.prototype.length = 0;
+
+function call(obj) {
+  var args = new Array();
+  var argStrings = new Array();
+
+  for (var i=1; i<arguments.length; i++) {
+    argStrings.push("args[" + i + "]");
+    args.push(arguments[i]);
+  }
+
+  obj.__call__ = this;
+  var ret = eval("obj.__call__(" + argStrings.join(", ") + ")");
+  delete obj.__call__;
+  return ret;
+}
+
+Function.prototype.call = call;
+
+var x = new Object();
+x.y = 1;
+
+function getY(a, b) {
+  return this.y + a + b;
+}
+
+log('log: ' + getY.call(x, 5, 10));
+log('log: ' + getY.call(x, 5, 10));
+
+debug(x, "x");
+
+debug(new Array(), 'new Array()');
+
+var x = new Object();
+x.y = 1;
+delete x.y;
+debug(x, "x");
+
+function BadToString() {
+  this.toString = badToString;
+}
+
+logTypeOf("hello", '"hello"');
+logTypeOf('', '""');
+logTypeOf(0, '0');
+logTypeOf('0', '"0"');
+logTypeOf(1, '1');
+logTypeOf('1', '"1"');
+logTypeOf(true, 'true');
+logTypeOf('true', '"true"');
+logTypeOf(false, 'false');
+logTypeOf('false', '"false"');
+logTypeOf(null, 'null');
+logTypeOf('null', '"null"');
+logTypeOf(o, 'new Object()');
+logTypeOf(d, 'new Date()');
+logTypeOf(Object, 'Object');
+logTypeOf(Date, 'Date');
+logTypeOf(document, 'document');
+logTypeOf(undefined, 'undefined');
+logTypeOf(new BadToString(), 'badToString');
+
+</script>
+
+</pre>

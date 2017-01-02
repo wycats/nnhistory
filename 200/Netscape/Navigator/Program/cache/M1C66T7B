@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Portal Sign</title>
+<style type="text/css">
+body {
+  font-size : 16px;
+}
+div#content {
+  width : 630px;
+}
+.hint {
+  font-style : italic; 
+  color : #666;
+  font-size : 12px;
+}
+.img {
+  text-align : center;
+}
+.left {
+  float : left;
+  margin-right : 16px;
+}
+.right {
+  float : right;
+  margin-left : 16px;
+}
+</style>
+</head>
+<body>
+<div id="content">
+  <p><img src="sign.jpg" class="left" />My floor at work is having an
+  office-decorating contest, and some friends of mine who work in a nearby room
+  decided to use video games as the theme for their decorations. Among the video
+  games they selected for display was a video game called <em>Portal</em>.</p>
+
+  <p><em>Portal</em> has become something of a cult classic since it was
+  released in 2007. Most players will instantly recognize the consistent and
+  distinctive aesthetic that <em>Portal</em> uses to immerse the player in a
+  world that is unconventional for first-person video games: the game takes
+  place in a series of "test chambers", wherein an artificially-intelligent
+  computer confronts the player with a series of puzzles, ostensibly with cake
+  as a reward for solving all of them.</p>
+
+  <p>One of the most dramatic presentations of this aesthetic is the large,
+  fluorescent-lit signs that flicker to life as the player approaches the start
+  of each chamber. Each sign shows which number test chamber the player is
+  in, how far the player is through the testing sequence, and what hazards will
+  and will not be present in the chamber.</p>
+ 
+  <p><img src="inset.png" class="right" />Originally, the <em>Portal</em>
+  office decorations were going to be small reproductions of the various hazard
+  symbols stuck on surfaces around the room. When I saw them, I was disappointed
+  at how low-quality they looked, so I offered to make some better
+  <em>Portal</em>-themed decorations. Since all the rooms on the floor are
+  numbered and there is a huge window into my friends' office from the hallway,
+  it seemed appropriate to recreate the entire sign.</p>
+  
+  <p>This proved difficult for a variety of reasons. Notably, the image files
+  the game uses to display the signs are much lower quality than would be
+  necessary to print a life-size version, so I had to trace each one that I
+  wanted to use in the sign (after quite a bit of difficulty finding the right
+  files to trace in the first place).</p>
+<!--5678901234567890123456789012345678901234567890123456789012345678901234567-->
+ 
+  <p><div class="left img"><div><a href="illustrations_large.jpg"
+  ><img src="illustrations.jpg" /></a></div><div class="hint">Click for a
+  larger view</div></div>I also created a number of original hazard symbols
+  appropriate to our office in the style of the in-game artwork, which turned
+  out to be at least as challenging as tracing the original graphics: many of
+  the concepts I wanted to represent (like "computer programming") did not lend
+  themselves to simple depiction, and people often disagreed about which
+  candidate designs looked better. I went through several iterations of each
+  new symbol, first drawing it by hand and then eyeballing a digital version
+  using the same tools I used to trace the in-game graphics. Ultimately, I
+  settled on this combination of new hazard symbols and reproductions of those
+  seen in <em>Portal</em>:</p>
+  
+  <p class="img"><img src="symbols.png" /></p>
+  
+  <p>When it was all done, we were left with a three-foot-by-six-foot
+  greyscale poster, which we taped to the inside of the glass in the office.
+  Philipp, who works there, took this photo:</p>
+  
+  <p><div class="img"><div><a href="office_large.jpg"><img src="office.jpg"
+  /></a></div><div class="hint">Click for a larger view</div></div></p>
+  
+  <p>There were many other small bits of art in the final design (which was
+  produced from <a href="sign.svg">this file</a>), and many more photos from
+  various points in the production process; but these were the most significant
+  parts of the project.</p>
+</div>
+</body>
+</html>

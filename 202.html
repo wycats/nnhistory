@@ -1,0 +1,138 @@
+<form name="myForm">
+  <input name="myInput" type="text">
+</form>
+<pre>
+
+<script>
+var undefined;
+
+function log(str) {
+  document.writeln(str);
+}
+
+alert(log == log);
+
+function debug(obj, name) {
+  document.open();
+  document.writeln(name + ":");
+  for (var prop in obj) {
+    var val = obj[prop];
+    var string = val + '';
+
+    // log("`" + val + "`");
+
+    // if (val == (val + '')) {
+    //   string = "'" + val + "'";
+    // } else if (val == 0 || val == '' || val == false || val == null) {
+    //   string = val + '';
+    // } else if (val + '' != null) {
+    //   string = val + '';
+    // } else {
+    //   string = '<object>';
+    // }
+
+    log("[" + prop + "] `" + string + "`");
+  }
+  log('');
+  document.close();
+}
+
+// debug(window, "window");
+// debug(document, "document");
+// debug(navigator, "navigator");
+
+function logTypeOf(val, desc) {
+  var type = typeOf(val);
+  log(desc + ': ' + type);
+}
+
+var undefined;
+
+function typeOf(val) {
+  if (isNumberOrBooleanOrNull(val)) {
+    var coerced = val + '';
+    if (coerced == 'true' || coerced == 'false') {
+      return 'boolean';
+    } else if (coerced == 'null') {
+      return 'object';
+    } else if (coerced == '<undefined>') {
+      return 'undefined';
+    } else {
+      return 'number';
+    }
+  } else if (isCallable(val)) {
+    return 'function';
+  } else if (isCallable(val.constructor)) {
+    return 'object';
+  } else {
+    return 'string';
+  }
+}
+
+function q() { 1 }
+function q() { 2 }
+
+alert(''.toString);
+
+function isNumberOrBooleanOrNull(val) {
+  return val == null;
+}
+
+function isCallable(v) {
+  return !v && v != null && (v + '') != '';
+}
+
+function escapeHTML(string) {
+  var out = "";
+
+  for (var i=0; i<string.length; i++) {
+    var c = string.charAt(i);
+
+    if (c == '<') {
+      out += "&lt;";
+    } else if (c == ">") {
+      out += "&gt;";
+    } else {
+      out += c;
+    }
+  }
+
+  return out;
+}
+
+var o = new Object();
+var p = new Object();
+p.x = 1;
+var d = new Date();
+
+function badToString() {
+  return this;
+}
+
+function BadToString() {
+  this.toString = badToString;
+}
+
+logTypeOf("hello", '"hello"');
+logTypeOf('', '""');
+logTypeOf(0, '0');
+logTypeOf('0', '"0"');
+logTypeOf(1, '1');
+logTypeOf('1', '"1"');
+logTypeOf(true, 'true');
+logTypeOf('true', '"true"');
+logTypeOf(false, 'false');
+logTypeOf('false', '"false"');
+logTypeOf(null, 'null');
+logTypeOf('null', '"null"');
+logTypeOf(o, 'new Object()');
+logTypeOf(d, 'new Date()');
+logTypeOf(Object, 'Object');
+logTypeOf(Date, 'Date');
+logTypeOf(document, 'document');
+logTypeOf(undefined, 'undefined');
+logTypeOf(new BadToString(), 'badToString');
+
+</script>
+
+</pre>
